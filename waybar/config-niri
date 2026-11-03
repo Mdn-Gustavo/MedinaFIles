@@ -1,0 +1,47 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 28,
+    "margin-top": 6,
+    "margin-left": 12,
+    "margin-right": 12,
+    "spacing": 8,
+
+    "modules-left": ["custom/logo", "niri/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "network", "battery", "tray"],
+
+    "custom/logo": {
+        "format": "  ",
+        "tooltip": false
+    },
+
+    "niri/workspaces": {
+        "format": "{name}",
+        "active-only": false,
+        "all-outputs": true
+    },
+
+    "clock": {
+        "format": "  {:%I:%M %p  |  %a, %b %d}"
+    },
+
+    "network": {
+        "format-wifi": "  {essid}",
+        "format-ethernet": "  Lan",
+        "format-disconnected": "⚠  Off"
+    },
+
+    "pulseaudio": {
+        "format": "  {volume}%",
+        "format-muted": "  Muted"
+    },
+
+    "battery": {
+        "format": "  {capacity}%"
+    },
+	"tray": {
+    	"icon-size": 16,
+    	"spacing": 8
+	},
+}

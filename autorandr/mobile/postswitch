@@ -1,0 +1,8 @@
+#!/bin/sh
+
+LAPTOP=$(xrandr | grep " connected primary" | cut -d" " -f1)
+[ -z "$LAPTOP" ] && LAPTOP=$(xrandr | grep " connected" | grep -v HDMI | head -n1 | cut -d" " -f1)
+
+for ws in $(i3-msg -t get_workspaces | jq -r '.[].name'); do
+    i3-msg "workspace $ws; move workspace to output $LAPTOP"
+done

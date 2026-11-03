@@ -1,0 +1,81 @@
+* {
+  font-family: "JetBrains Mono Nerd Font", "JetBrains Mono", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Deixa a barra de fundo 100% invisível para dar o efeito de módulos flutuantes */
+#waybar {
+  background-color: transparent;
+}
+
+/* Estilo padrão aplicado a cada módulo individualmente (as pílulas) */
+#custom-logo,
+#workspaces,
+#clock,
+#pulseaudio,
+#network,
+#battery {
+  background-color: rgba(17, 17, 27, 0.75);
+  /* Fundo escuro levemente translúcido */
+  color: #cdd6f4;
+  padding: 2px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  /* Efeito de sombra sutil no wallpaper */
+}
+
+/* Customização do botão de Logo (Icon do Sistema) */
+#custom-logo {
+  color: #f5c2e7;
+  /* Rosa claro pastel */
+  font-size: 13px;
+  padding: 2px 10px;
+}
+
+/* Área de Workspaces / Espaços de Trabalho */
+#workspaces button {
+  padding: 0 4px;
+  color: #585b70;
+  /* Cor apagada para inativos */
+  background: transparent;
+}
+
+#workspaces button.active {
+  color: #89b4fa;
+  /* Azul pastel para o workspace ativo */
+}
+
+#workspaces button.urgent {
+  color: #f38ba8;
+  /* Vermelho pastel para alertas */
+}
+
+/* Relógio Centralizado */
+#clock {
+  color: #cdd6f4;
+}
+
+/* Ícones e Cores das pílulas da direita */
+#pulseaudio {
+  color: #f9e2af;
+  /* Amarelo aconchegante */
+}
+
+#network {
+  color: #89dceb;
+  /* Ciano suave */
+}
+
+#battery {
+  color: #a6e3a1;
+  /* Verde pastel relaxante */
+}
+
+#tray {
+  background-color: rgba(17, 17, 27, 0.75);
+  padding: 2px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}

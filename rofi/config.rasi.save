@@ -1,0 +1,72 @@
+kconfiguration {
+    modi: "drun,run";
+    show-icons: true;
+    display-drun: "󰀻 ";
+    display-run: " ";
+    drun-display-format: "{name}";
+    font: "JetBrainsMono Nerd Font 11"; /* Se não tiver essa, usa 'Sans 11' */
+}
+
+* {
+    /* Cores Dark Total */
+    bg: #0b0b0d;           
+    bg-alt: #16161a;       
+    fg: #eeeeee;           
+    accent: #7289da;       /* Azul/Roxo sutil */
+    
+    /* Forçando tudo a herdar o fundo escuro */
+    background-color: @bg;
+    text-color: @fg;
+    spacing: 0;
+}
+
+window {
+    width: 35%;
+    background-color: @bg; /* Garante que o fundo da janela é dark */
+    border: 2px;           /* Tamanho da borda externa */
+    border-color: #2a2a2e; /* Cinza bem escuro (substitui o salmão) */
+    border-radius: 10px;
+    padding: 0;            /* Remove o padding que pode mostrar o fundo "salmão" */
+}
+
+mainbox {
+    padding: 20px;         /* O padding agora fica dentro da caixa principal */
+    background-color: @bg;
+}
+inputbar {
+    children: [prompt, entry];
+    background-color: @bg-alt;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 0px 0px 10px 0px;
+}
+
+prompt {
+    background-color: @accent;
+    text-color: @bg;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+entry {
+    padding: 5px;
+    placeholder: "Pesquisar...";
+    placeholder-color: #555555;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    fixed-height: false;
+}
+
+element {
+    padding: 8px;
+    border-radius: 5px;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: @bg;
+}
+

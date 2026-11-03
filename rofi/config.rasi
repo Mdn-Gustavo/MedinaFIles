@@ -1,0 +1,90 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    display-drun: " ";
+    drun-display-format: "{name}";
+    font: "JetBrainsMono Nerd Font 11";
+}
+
+* {
+    /* Paleta Darkzão Extremo */
+    bg: #0f1014;           /* Preto quase puro */
+    bg-sel: #21222c;       /* Cinza escuro para o item selecionado */
+    fg: #ffffff;           /* Branco puro para as letras */
+    pink: #ffffff;         /* Rosa Dracula para detalhes sutis */
+    
+    background-color: transparent;
+    text-color: @fg;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 25%;            /* Um pouco mais estreito pra ficar elegante */
+    background-color: @bg;
+    border: 1px;           /* Borda bem fininha */
+    border-color: @pink;   /* O contorno rosa que você queria */
+    border-radius: 6px;
+}
+
+mainbox {
+    padding: 15px;
+    background-color: @bg;
+    children: [inputbar, listview];
+}
+
+inputbar {
+    background-color: @bg;
+    children: [prompt, entry];
+    margin: 0 0 10px 0;
+}
+
+prompt {
+    background-color: @bg;
+    text-color: @pink;
+    padding: 0 10px 0 0;
+}
+
+entry {
+    background-color: @bg;
+    text-color: @fg;       /* Texto que você digita em branco */
+    placeholder: "Buscar...";
+    placeholder-color: #44475a;
+}
+
+listview {
+    lines: 6;
+    columns: 1;
+    fixed-height: false;
+    background-color: @bg;
+}
+
+element {
+    padding: 8px;
+    spacing: 12px;
+    border-radius: 4px;
+}
+
+/* Mata qualquer cor residual (incluindo o salmão) */
+element normal.normal, element alternate.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+/* O item que você seleciona com a seta */
+element selected.normal {
+    background-color: @bg-sel; 
+    text-color: @fg;           /* Mantém a letra branca no selecionado */
+    border: 0 0 0 3px;         /* Uma bordinha rosa só do lado do app selecionado */
+    border-color: @pink;
+}
+
+element-icon {
+    size: 24px;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color: inherit; /* Garante que segue o branco (@fg) */
+}

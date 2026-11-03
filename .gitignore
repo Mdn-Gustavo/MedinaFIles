@@ -1,0 +1,27 @@
+# Ignora tudo na raiz da pasta .config
+/*
+
+# Libera apenas o gitignore e as pastas de configuração
+!/.gitignore
+!/alacritty/
+!/autorandr/
+!/autostart/
+!/btop/
+!/cava/
+!/i3/
+!/i3status/
+!/kitty/
+!/mako/
+!/niri/
+!/nvim/
+!/nvim.bak/
+!/pipewire/
+!/polybar/
+!/rofi/
+!/spotify-player/
+!/sway/
+!/thunar/
+!/volumeicon/
+!/waybar/
+!/xdg-desktop-portal/
+!/xdg-desktop-portal-wlr/
